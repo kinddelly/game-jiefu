@@ -3,7 +3,7 @@ const config = {
     gameTime: 30, // 游戏时长（秒）
     itemSpeed: 5, // 物品下落速度
     itemInterval: 200, // 物品生成间隔（毫秒）
-    playerSpeed: 3, // 玩家移动速度
+    playerSpeed: 10, // 玩家移动速度
     items: [
         { type: 'yuanbao', score: 10, image: 'yuanbao.png', sound: 'music1' },
         { type: 'hongbao', score: 10, image: 'hongbao.png', sound: 'music1' },
