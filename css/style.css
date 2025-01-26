@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 欢迎页样式 */
+.welcome-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../image/welcome_background.jpeg') center center/cover no-repeat;
+}
+
+.start-button {
+    position: absolute;
+    left: 50%;
+    top: 66.7%;
+    transform: translate(-50%, -50%);
+    padding: 15px 40px;
+    font-size: 24px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start-button:hover {
+    background-color: #ff7875;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 游戏页样式 */
+.game-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../image/game_background.jpeg') center center/cover no-repeat;
+}
+
+.info-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.player {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 203px;
+    background: url('../image/user.png') center center/contain no-repeat;
+    transition: left 0.1s linear;
+}
+
+/* 掉落物品样式 */
+.item {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 结算弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #ff4d4f;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#finalScore {
+    font-size: 36px;
+    color: #ff4d4f;
+    margin-bottom: 30px;
+}
+
+.restart-button {
+    padding: 12px 30px;
+    font-size: 20px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.restart-button:hover {
+    background-color: #ff7875;
+    transform: scale(1.1);
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .start-button {
+        padding: 12px 30px;
+        font-size: 20px;
+    }
+
+    .info-bar {
+        font-size: 16px;
+    }
+
+    .modal-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #finalScore {
+        font-size: 30px;
+    }
+
+    .restart-button {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+} 

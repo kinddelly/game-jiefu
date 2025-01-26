@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>接福气小游戏</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 欢迎页 -->
+    <div id="welcomePage" class="page active">
+        <div class="welcome-background"></div>
+        <button id="startButton" class="start-button">开始接福</button>
+    </div>
+
+    <!-- 游戏页 -->
+    <div id="gamePage" class="page">
+        <div class="game-background"></div>
+        <div class="info-bar">
+            <div class="score">福气值：<span id="score">0</span></div>
+            <div class="timer">时间：<span id="timer">30</span>s</div>
+        </div>
+        <div id="gameArea" class="game-area">
+            <div id="player" class="player"></div>
+        </div>
+    </div>
+
+    <!-- 结算弹窗 -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <h2>游戏结束</h2>
+            <h3>福气值</h3>
+            <p id="finalScore">0</p>
+            <button id="restartButton" class="restart-button">再来！</button>
+        </div>
+    </div>
+
+    <!-- 音频资源 -->
+    <audio id="bgMusic" loop>
+        <source src="music/background_music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="buttonSound">
+        <source src="music/button.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bombSound">
+        <source src="music/bomb.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music1">
+        <source src="music/music1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music2">
+        <source src="music/music2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music3">
+        <source src="music/music3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music4">
+        <source src="music/music4.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/game.js"></script>
+</body>
+</html> 
